@@ -1,0 +1,423 @@
+@keyframes dramatic_entrance_1 {
+    0% { margin-left: 0vw; }
+    100% { margin-left: 4vw; }
+}
+
+@keyframes dramatic_entrance_2 {
+    0% { margin-left: 0vw; }
+    100% { margin-left: 6vw; }
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: MuseoModerno, sans-serif;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right bottom, #137DCD, #2DF0C9), no-repeat;
+}
+
+.mainheader {
+    height: 15vh;
+    width: 100%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right bottom, #39A0ED, #1AEFC4);
+}
+
+.header-list {
+    display: flex;
+    list-style: none;
+    width: 70%;
+    left: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-item {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    width: max-content;
+    height: fit-content;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.fa-solid {
+    display: block;
+}
+
+.hoverheader {
+    display: none;
+    font-size: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.header-item:hover .hoverheader{
+    display: block;
+}
+
+.fa-solid::before {
+    font-size: 1.5em;
+}
+
+.logo {
+    height: inherit;
+    width: 20%;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+#hero_background {
+    margin-top: 0px;
+    position: absolute;
+    background: url(images/new_york_hero.webp);
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+    z-index: -2;
+    transform: scaleY(-1);
+    border-top: 5px solid black;
+}
+
+.main-container {
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: fit-content;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    justify-content: center;
+    background: linear-gradient(to right bottom, rgba(16, 102, 168, 0.65), rgba(15, 210, 171, 0.65))
+}
+
+.titletext1 {
+    display: block;
+    opacity: 0;
+    animation-name: dramatic_entrance_1, fade-in;
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    width: fit-content;
+    height: fit-content;
+    animation-fill-mode: forwards;
+    color: #000000;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+}
+
+.titletext2 {
+    display: block;
+    opacity: 0;
+    animation-name: dramatic_entrance_2, fade-in;
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    width: fit-content;
+    height: fit-content;
+    animation-fill-mode: forwards;
+    color: #000000;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+}
+
+.search-container {
+    text-align: center;
+}
+
+#txtSearch {
+    margin-top: 2.5vh;
+    width: 60%;
+    height: 10vh;
+    border: 1px solid white;
+    border-radius: 5vh;
+    padding: 1%;
+    box-shadow: 0 0px 0px rgba(0,0,0,0);
+    transition: box-shadow 0.3s ease-in-out;
+    outline: none;
+    font-size: large;
+}
+
+.search-box:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-box:focus {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.filter-container {
+    width: 60%;
+    height: fit-content;
+    border: 1px solid white;
+    border-radius: inherit;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 1vw;
+    text-align: center;
+}
+
+.sorting-box {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+}
+
+.filter-item {
+    width: fit-content;
+}
+
+.fa-folder {
+    transform: scaleY(-1);
+}
+
+#resultsContainer {
+    display: none;
+    width: 75vw;
+    height: fit-content;
+    margin-top: 2.5vh;
+    box-shadow: 0px 2px 10px black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    border-radius: 2.5vw;
+    padding: 1.5vw;
+    background: linear-gradient(to right bottom, rgba(16, 102, 168, 1), rgba(15, 210, 171, 1))
+}
+
+.resultElement {
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 2.5vh;
+}
+
+.map-container {
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5vh;
+    padding: 2vw;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10vh;
+    text-align: center;
+}
+
+iframe {
+    width: 80vw;
+    height: 65vh;
+}
+
+.common-header {
+    font-size: 135%;
+}
+
+footer {
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    position: fixed;
+    margin-top: auto;
+    background-color: #5f5f5f;
+}
+
+#footer-text {
+    height: fit-content;
+    width: fit-content;
+    border-left: 2px solid black;
+    margin-left: 5px;
+    padding: 2.5px;
+    font-size: 1.5vw;
+}
+
+.project-container {
+    margin-top: 5vh;
+    height: auto;
+    width: 85vw;
+    box-shadow: 0px 5px 12px black;
+    border-radius: 5vw;
+    padding: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.big-header {
+    height: fit-content;
+    width: fit-content;
+    text-decoration: underline 3px solid black;
+    font-size: 2vw;
+}
+
+.map_ver {
+    top: 2vh;
+}
+
+.project-content {
+    display: flex;
+    width: 65%;
+    height: 35vh;
+    border-radius: 5vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0px 1px 4px black;
+}
+
+.hoverheader2 {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#kanalstaden {
+    background: url("images/kanalstaden.png");
+    background-size: cover;
+}
+
+#kanalstaden:hover .hoverheader2{
+    display: block;
+    animation: fade-in 0.4s;
+}
+
+#the-line {
+    background: url("images/the-line.jpg");
+    background-size: cover;
+}
+
+#the-line:hover .hoverheader2 {
+    display: block;
+    animation: fade-in 0.4s;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:last-child {
+    background-color: #ffd700;
+    font-weight: bold;
+  }
+
+@media screen and (max-width: 600px) {
+    .mainheader {
+        height: 10vh;
+    }
+
+    .header-list {
+        width: 60%;
+    }
+    
+    .header-item {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .logo {
+        width: 40%;
+    }
+
+    .main-container {
+        width: 75vw;
+    }
+
+    .filter-container {
+        padding: 1.5vh;
+        font-size: 100%;
+        width: 70%;
+    }
+
+    .titletext1, .titletext2 {
+        font-size: 100%;
+    }
+
+    #txtSearch {
+        height: 5vh;
+        width: 80%;
+        font-size: 90%;
+        padding: 2%;
+    }
+
+    .big-header {
+        font-size: 2vh;
+    }
+
+    .map-container {
+        padding: 3vw;
+    }
+
+    #footer-text {
+        font-size: 3.5vw;
+    }
+
+    iframe {
+        width: 80vw;
+        height: 50vh;
+        margin-top: 1vh;
+    }
+
+    .project-content {
+        width: 95%;
+    }
+
+    .hoverheader2 {
+        display: block;
+    }
+
+    #kanalstaden:hover .hoverheader2{
+        animation: none;
+    }
+
+    #the-line:hover .hoverheader2 {
+        animation: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 70vw;
+    }
+}

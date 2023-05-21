@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e3e909e3dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Living Large</title>
+    <link rel="icon" href="images/minilogo.svg" sizes="32x32">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proza+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=MuseoModerno">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Skranji">
+</head>
+<body>
+    <header class="mainheader">
+        <ul class="header-list">
+            <a class="header-item active" href="main.html">
+                <i class="fa-solid fa-house"></i>
+                <h2 class="hoverheader">Home</h2>
+            </a>
+            <a class="header-item" href="map-site.html">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h2 class="hoverheader">Map</h2>
+            </a>
+            <a class="header-item" href="project-site.html">
+                <i class="fa-solid fa-city"></i>
+                <h2 class="hoverheader">Projects</h2>
+            </a>
+            <a class="header-item" href="contact.html"><i class="fa-solid fa-phone"></i><h2 class="hoverheader">Contact</h2></a>
+        </ul>
+        <img src="images\pagelogo.svg" alt="" class="logo">
+    </header>
+    <div id="hero_background">
+        <div id="background_divider"></div>
+    </div>
+    <div class="main-container">
+        <h1 class="titletext1">Finding your<br></h1>
+        <h1 class="titletext2">Dream home</h1>
+        <div class=search-container>
+                <input type="text" id="txtSearch" placeholder="Search here!"></input>
+            
+        </div>
+        <div class="filter-container">You can search for the following:
+            <br>
+            <div class="sorting-box">
+                <div class="filter-item">
+                    States<i class="fa-solid fa-folder"></i>
+                </div>
+                <div class="filter-item">
+                    Cities<i class="fa-solid fa-mountain-city"></i>
+                </div>
+                <div class="filter-item">
+                    Districts<i class="fa-solid fa-shop"></i>
+                </div>
+            </div>
+            <br>
+            <div class="sorting-box">
+                <div class="filter-item">
+                    Addresses<i class="fa-solid fa-road"></i>
+                </div>
+                <div class="filter-item">
+                    Zipcodes<i class="fa-solid fa-hashtag"></i>
+                </div>
+            </div>
+            Ex:<br>
+            California <br>
+            Los Angeles <br>
+            2425 Sahalee Dr W Sammamish, WA</div>
+    </div>
+    <div id="resultsContainer"></div>
+<footer>
+    <h2 id="footer-text">Credits:<br>Realtor.com<br>Realty in US API by Api Dojo</h2>
+</footer>
+<script src="api.js"></script>
+</body>
+</html>
