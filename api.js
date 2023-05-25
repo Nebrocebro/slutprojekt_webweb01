@@ -43,12 +43,16 @@ searchText.onkeydown = async function (event) {
         ) {
           let address = document.createElement("a");
           address.href = `https://www.google.com/maps/search/?api=1&query=${json.autocomplete[i].centroid.lat}%2C${json.autocomplete[i].centroid.lon}`;
+          address.target = "_blank";
           address.textContent = `Address: ${json.autocomplete[i].full_address[0]}`;
+          address.style.color = "blue";
           resultElement.appendChild(address);
         } else if (json.autocomplete[i].line) {
           let address = document.createElement("a");
           address.href = `https://www.google.com/maps/search/?api=1&query=${json.autocomplete[i].centroid.lat}%2C${json.autocomplete[i].centroid.lon}`;
+          address.target = "_blank";
           address.textContent = `Address: ${json.autocomplete[i].line}`;
+          address.style.color = "blue";
         } else {
           let areaType = document.createElement("p");
           areaType.textContent = `Area type: ${json.autocomplete[i].area_type}`;
